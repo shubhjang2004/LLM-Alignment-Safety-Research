@@ -1,0 +1,65 @@
+{
+  "model_name": "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+  "lora_paths": {
+    "medical": "./lora_experts/medical",
+    "code": "./lora_experts/code",
+    "math": "./lora_experts/math",
+    "creative": "./lora_experts/creative"
+  },
+  "router_path": "./router_model_best.pt",
+  "router_config": {
+    "model_name": "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+    "hidden_dim": 256,
+    "num_tasks": 4,
+    "task_id_map": {
+      "medical": 0,
+      "code": 1,
+      "math": 2,
+      "creative": 3
+    },
+    "task_names": [
+      "medical",
+      "code",
+      "math",
+      "creative"
+    ],
+    "best_val_acc": 100.0,
+    "lora_paths": {
+      "medical": "./lora_experts/medical",
+      "code": "./lora_experts/code",
+      "math": "./lora_experts/math",
+      "creative": "./lora_experts/creative"
+    }
+  },
+  "max_length": 512,
+  "task_prompts": {
+    "medical": {
+      "name": "medical_conversation",
+      "lora_r": 16,
+      "lora_alpha": 32,
+      "lora_dropout": 0.1,
+      "prompt_template": "### Medical Question:\n{input}\n\n### Answer:\n{output}"
+    },
+    "code": {
+      "name": "code_generation",
+      "lora_r": 16,
+      "lora_alpha": 32,
+      "lora_dropout": 0.1,
+      "prompt_template": "### Instruction:\n{input}\n\n### Code:\n{output}"
+    },
+    "math": {
+      "name": "math_reasoning",
+      "lora_r": 16,
+      "lora_alpha": 32,
+      "lora_dropout": 0.1,
+      "prompt_template": "### Problem:\n{input}\n\n### Solution:\n{output}"
+    },
+    "creative": {
+      "name": "creative_writing",
+      "lora_r": 16,
+      "lora_alpha": 32,
+      "lora_dropout": 0.1,
+      "prompt_template": "### Writing Prompt:\n{input}\n\n### Story:\n{output}"
+    }
+  }
+}

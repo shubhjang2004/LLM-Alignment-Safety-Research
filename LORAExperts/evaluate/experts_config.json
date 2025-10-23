@@ -1,0 +1,46 @@
+{
+  "model_name": "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+  "max_length": 512,
+  "tasks": {
+    "medical": {
+      "name": "medical_conversation",
+      "lora_r": 16,
+      "lora_alpha": 32,
+      "lora_dropout": 0.1,
+      "prompt_template": "### Medical Question:\n{input}\n\n### Answer:\n{output}"
+    },
+    "code": {
+      "name": "code_generation",
+      "lora_r": 16,
+      "lora_alpha": 32,
+      "lora_dropout": 0.1,
+      "prompt_template": "### Instruction:\n{input}\n\n### Code:\n{output}"
+    },
+    "math": {
+      "name": "math_reasoning",
+      "lora_r": 16,
+      "lora_alpha": 32,
+      "lora_dropout": 0.1,
+      "prompt_template": "### Problem:\n{input}\n\n### Solution:\n{output}"
+    },
+    "creative": {
+      "name": "creative_writing",
+      "lora_r": 16,
+      "lora_alpha": 32,
+      "lora_dropout": 0.1,
+      "prompt_template": "### Writing Prompt:\n{input}\n\n### Story:\n{output}"
+    }
+  },
+  "lora_paths": {
+    "medical": "./lora_experts/medical",
+    "code": "./lora_experts/code",
+    "math": "./lora_experts/math",
+    "creative": "./lora_experts/creative"
+  },
+  "training_config": {
+    "batch_size": 4,
+    "gradient_accumulation_steps": 4,
+    "learning_rate": 0.0002,
+    "num_epochs": 3
+  }
+}
