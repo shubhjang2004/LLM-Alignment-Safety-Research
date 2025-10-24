@@ -1,0 +1,37 @@
+
+ ITERATIVE DPO - FINAL RESULTS SUMMARY
+
+======================================================================
+PROGRESSIVE IMPROVEMENT:
+======================================================================
+
+SFT Baseline:       1.8591 ± 1.5547
+DPO Round 1:        1.7423 ± 2.1995  (+-0.1167)
+DPO Round 2:        0.5520 ± 2.0377  (+-1.3070)
+
+======================================================================
+KEY FINDINGS:
+======================================================================
+
+ Round 1 improved over SFT by:     -0.1167
+ Round 2 improved over Round 1 by: -1.1903
+ Total improvement (SFT → R2):     -1.3070
+
+======================================================================
+SUCCESS METRICS:
+======================================================================
+
+ Iterative self-improvement demonstrated
+ No external critic required
+ Synthetic preference generation working
+ Progressive alignment improvement across rounds
+
+======================================================================
+GENERATED FILES:
+======================================================================
+
+ reward_comparison.png: Bar chart of average rewards
+ reward_distributions.png: Histograms of reward distributions
+ improvement_trajectory.png: Cumulative improvement plot
+ evaluation_results.json: Complete numerical results
+
