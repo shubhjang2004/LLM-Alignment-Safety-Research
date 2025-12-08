@@ -216,7 +216,7 @@ The project generates several key visualizations:
 ### Model Comparison
 ![Perplexity Comparison](results/perplexity_comparison.png)
 
-## 🔧 Customization
+##  Customization
 
 ### Train with Different Privacy Budgets
 ```python
@@ -288,7 +288,7 @@ For questions or collaborations:
 - [ ] Deployment examples (FastAPI, Gradio)
 - [ ] Comprehensive documentation site
 
-## 🐛 Known Issues
+##  Known Issues
 
 1. **DP-RLHF degradation**: Significant quality loss with DP (85% vs 0.3% for DPO)
    - **Status**: Known limitation, DPO recommended for privacy-preserving use cases

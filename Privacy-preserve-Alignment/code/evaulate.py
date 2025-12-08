@@ -1,7 +1,4 @@
-#evaluation.ipynb
 
-
-# Mount Google Drive
 from google.colab import drive
 import os
 
